@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const localhost_url = 'http://localhost:8000';
+const host_url = 'https://leaderboard-backend-f59l9iyov-priyanka1508s-projects.vercel.app';
 const API = axios.create({
-  baseURL: 'http://localhost:8000/api/leaderboard',
+  baseURL: `${host_url}/api/leaderboard`,
 });
 
 export default API;
