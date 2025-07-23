@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Title, Divider, Stack, Paper } from '@mantine/core';
+import Leaderboard from './components/Leaderboard';
+import RankChecker from './components/RankChecker';
 
 function App() {
+  const backgroundStyle = {
+    minHeight: '100vh',
+    backgroundImage: 'url("https://www.transparenttextures.com/patterns/skulls.png")',
+    backgroundRepeat: 'repeat',
+    backgroundSize: 'auto',
+    padding: '40px 0',
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={backgroundStyle}>
+      <Container size="sm">
+          <Stack spacing="xl">
+            <Title style={{ textAlign: 'center' }} order={1}>
+              🎮 Gaming Leaderboard
+            </Title>
+            <Divider my="sm" />
+            <Leaderboard />
+            <Divider my="sm" />
+            <RankChecker />
+          </Stack>
+      </Container>
     </div>
   );
 }
