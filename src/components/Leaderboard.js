@@ -6,7 +6,7 @@ function Leaderboard() {
 
   const fetchTopPlayers = async () => {
     try {
-      const res = await API.get('/top');
+      const res = await API.get('top');
       console.log(res.data);
       setTopPlayers(res.data);
     } catch (err) {
